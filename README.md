@@ -48,3 +48,11 @@ ln -s /home/thiago/projects/linux/i3/config /home/thiago/.config/i3/config
 ```
 ln -s /home/thiago/projects/linux/i3status/config /home/thiago/.config/i3status/config
 ```
+
+## Dracula
+
+### Ulauncher
+
+```
+git clone https://github.com/dracula/ulauncher.git ~/.config/ulauncher/user-themes/dracula-ulauncher
+```

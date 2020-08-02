@@ -199,6 +199,8 @@ for_window [class=".*"] border pixel 3
 
 gaps inner 10
 gaps outer 0
+smart_gaps on
+smart_borders on
 
 # Printscreen
 bindsym Print exec maim -s | xclip -selection clipboard -t image/png
@@ -244,3 +246,6 @@ bindsym $mod+q kill
 
 # Snooze notifications
 bindsym $mod+Shift+n exec --no-startup-id notify-send "DUNST_COMMAND_TOGGLE"
+
+# uLauncher
+for_window [class="Ulauncher"] floating enable, border none
