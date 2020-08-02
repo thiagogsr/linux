@@ -249,3 +249,17 @@ bindsym $mod+Shift+n exec --no-startup-id notify-send "DUNST_COMMAND_TOGGLE"
 
 # uLauncher
 for_window [class="Ulauncher"] floating enable, border none
+
+# layouts
+exec --no-startup-id "i3-msg 'workspace 1; append_layout ~/.config/i3/workspace-1.json'"
+exec --no-startup-id "i3-msg 'workspace 2; append_layout ~/.config/i3/workspace-2.json'"
+exec --no-startup-id "i3-msg 'workspace 3; append_layout ~/.config/i3/workspace-3.json'"
+exec --no-startup-id "i3-msg 'workspace 4; append_layout ~/.config/i3/workspace-4.json'"
+
+exec --no-startup-id brave-browser
+exec --no-startup-id slack
+exec --no-startup-id code
+exec --no-startup-id mailspring
+exec --no-startup-id spotify
+exec --no-startup-id todoist
+exec --no-startup-id zoom-client
