@@ -44,7 +44,7 @@ floating_modifier $mod
 bindsym $mod+Return exec i3-sensible-terminal
 
 # kill focused window
-bindsym $mod+Shift+q kill
+# bindsym $mod+Shift+q kill
 
 # start dmenu (a program launcher)
 # bindsym $mod+d exec dmenu_run
@@ -203,7 +203,7 @@ gaps outer 0
 bindsym Print exec gnome-screenshot -ac
 
 # Keyboard layout
-bindsym $mod+space exec ~/.config/i3/i3-keyboard-layout cycle br "us,br intl"
+bindsym $mod+space exec "~/.config/i3/i3-keyboard-layout cycle br 'us,br intl'"
 
 # Keyring
 exec --no-startup-id /usr/bin/gnome-keyring-daemon --start --components=secrets
@@ -230,3 +230,11 @@ mode "exit: [l]ogout, [r]eboot, [s]hutdown" {
 }
 
 bindsym $mod+x mode "exit: [l]ogout, [r]eboot, [s]hutdown"
+
+# Media player controls
+bindsym XF86AudioPlay exec "playerctl --player=spotify,%any play-pause"
+bindsym XF86AudioNext exec "playerctl --player=spotify,%any next"
+bindsym XF86AudioPrev exec "playerctl --player=spotify,%any previous"
+
+# kill focused window
+bindsym $mod+q kill
