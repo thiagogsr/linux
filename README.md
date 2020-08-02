@@ -3,7 +3,7 @@
 ## Requirements
 
 ```
-sudo apt install playerctl
+sudo apt install playerctl xclip maim
 ```
 
 ## Input

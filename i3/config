@@ -200,7 +200,7 @@ gaps inner 10
 gaps outer 0
 
 # Printscreen
-bindsym Print exec gnome-screenshot -ac
+bindsym Print exec maim -s | xclip -selection clipboard -t image/png
 
 # Keyboard layout
 bindsym $mod+space exec "~/.config/i3/i3-keyboard-layout cycle br 'us,br intl'"
