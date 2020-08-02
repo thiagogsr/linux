@@ -3,7 +3,7 @@
 ## Requirements
 
 ```
-sudo apt install playerctl xbacklight
+sudo apt install playerctl
 ```
 
 ## Input
