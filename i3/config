@@ -194,7 +194,7 @@ bar {
   }
 }
 
-for_window [class=".*"] border pixel 2
+for_window [class=".*"] border pixel 3
 
 gaps inner 10
 gaps outer 0
@@ -238,3 +238,7 @@ bindsym XF86AudioPrev exec "playerctl --player=spotify,%any previous"
 
 # kill focused window
 bindsym $mod+q kill
+
+# Backlight
+bindsym XF86MonBrightnessUp exec xbacklight -inc 5 && echo xbacklight > /home/thiago/.config/brightness && $refresh_i3status
+bindsym XF86MonBrighnessDown exec xbacklight -dec 5 && echo xbacklight > /home/thiago/.config/brightness && $refresh_i3status
