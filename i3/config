@@ -232,8 +232,8 @@ mode "exit: [l]ogout, [r]eboot, [s]hutdown" {
 bindsym $mod+x mode "exit: [l]ogout, [r]eboot, [s]hutdown"
 
 # Media player controls
-bindsym XF86AudioRaiseVolume exec --no-startup-id [ $(pacmd dump-volumes | awk 'NR==1{print $8}' | sed 's/\%//') -lt 100 ] && pactl set-sink-volume @DEFAULT_SINK@ +5% && $refresh_i3status
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5% && $refresh_i3status
+bindsym XF86AudioRaiseVolume exec --no-startup-id [ $(pacmd dump-volumes | awk 'NR==1{print $8}' | sed 's/\%//') -lt 100 ] && pactl set-sink-mute @DEFAULT_SINK@ 0 && pactl set-sink-volume @DEFAULT_SINK@ +5% && $refresh_i3status
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ 0 && pactl set-sink-volume @DEFAULT_SINK@ -5% && $refresh_i3status
 bindsym XF86AudioPlay exec "playerctl --player=spotify,%any play-pause"
 bindsym XF86AudioNext exec "playerctl --player=spotify,%any next"
 bindsym XF86AudioPrev exec "playerctl --player=spotify,%any previous"
