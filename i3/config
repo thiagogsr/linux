@@ -179,6 +179,7 @@ bindsym $mod+r mode "resize"
 bar {
   status_command i3status | ~/.config/i3/i3-keyboard-layout i3status
   position top
+  height 25
 
   # Dracula
   colors {
@@ -240,3 +241,6 @@ bindsym XF86AudioPrev exec "playerctl --player=spotify,%any previous"
 
 # kill focused window
 bindsym $mod+q kill
+
+# Snooze notifications
+bindsym $mod+Shift+n exec --no-startup-id notify-send "DUNST_COMMAND_TOGGLE"
