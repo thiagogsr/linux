@@ -225,15 +225,15 @@ client.background       #F8F8F2
 bindsym $mod+d exec "dmenu_run -nf '#F8F8F2' -nb '#282A36' -sb '#6272A4' -sf '#F8F8F2' -fn 'monospace-10' -p 'dmenu%'"
 
 # Exit
-mode "exit: [l]ogout, [r]eboot, [s]hutdown" {
+mode "exit: [l]ogout, [r]eboot, [p]oweroff" {
   bindsym l exec i3-msg exit
   bindsym r exec systemctl reboot
-  bindsym s exec systemctl shutdown
+  bindsym p exec systemctl poweroff
   bindsym Escape mode "default"
   bindsym Return mode "default"
 }
 
-bindsym $mod+x mode "exit: [l]ogout, [r]eboot, [s]hutdown"
+bindsym $mod+x mode "exit: [l]ogout, [r]eboot, [p]oweroff"
 
 # Media player controls
 bindsym XF86AudioRaiseVolume exec --no-startup-id [ $(pacmd dump-volumes | awk 'NR==1{print $8}' | sed 's/\%//') -lt 100 ] && pactl set-sink-mute @DEFAULT_SINK@ 0 && pactl set-sink-volume @DEFAULT_SINK@ +5% && $refresh_i3status
