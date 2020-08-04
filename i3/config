@@ -181,6 +181,7 @@ bar {
   position top
   height 30
   tray_padding 7
+  separator_symbol "•"
 
   # Dracula
   colors {
