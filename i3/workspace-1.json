@@ -12,8 +12,7 @@
     "percent": 0.7,
     "swallows": [
        {
-          "class": "^Brave\\-browser$",
-          "instance": "^brave\\-browser$"
+          "class": "^Brave\\-browser$"
        }
     ],
     "type": "con"
@@ -40,8 +39,7 @@
       "percent": 0.5,
       "swallows": [
         {
-          "class": "^Mailspring$",
-          "instance": "^mailspring$"
+          "class": "^Mailspring$"
         }
       ],
       "type": "con"
@@ -59,8 +57,7 @@
       "percent": 0.5,
       "swallows": [
         {
-          "class": "^Todoist$",
-          "instance": "^todoist$"
+          "class": "^Todoist$"
         }
       ],
       "type": "con"
