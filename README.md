@@ -3,7 +3,7 @@
 ## Requirements
 
 ```
-sudo apt install playerctl xclip maim
+sudo apt install playerctl xclip maim lxappearance
 ```
 
 ## Input
@@ -37,13 +37,16 @@ chmod +x ~/.config/i3/i3-keyboard-layout
 
 1. Create symbolic links for config files
 
-1.1 i3
+i3
 
 ```
 ln -s /home/thiago/projects/linux/i3/config /home/thiago/.config/i3/config
+ln -s /home/thiago/projects/linux/i3/workspace-1.json /home/thiago/.config/i3/workspace-1.json
+ln -s /home/thiago/projects/linux/i3/workspace-2.json /home/thiago/.config/i3/workspace-2.json
+ln -s /home/thiago/projects/linux/i3/workspace-3.json /home/thiago/.config/i3/workspace-3.json
 ```
 
-1.2 i3status
+i3status
 
 ```
 ln -s /home/thiago/projects/linux/i3status/config /home/thiago/.config/i3status/config
@@ -56,3 +59,16 @@ ln -s /home/thiago/projects/linux/i3status/config /home/thiago/.config/i3status/
 ```
 git clone https://github.com/dracula/ulauncher.git ~/.config/ulauncher/user-themes/dracula-ulauncher
 ```
+
+### GTK
+
+1. Download and unzip the theme
+
+```
+mkdir ~/.themes
+wget https://github.com/dracula/gtk/archive/master.zip -O ~/.themes/dracula-gtk.zip
+unzip ~/.themes/dracula-gtk.zip -d ~/.themes && mv ~/.themes/gtk-master ~/.themes/dracula
+rm ~/.themes/dracula-gtk.zip
+```
+
+2. Run `lxappearance` and change theme to `dracula`

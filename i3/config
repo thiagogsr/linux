@@ -264,8 +264,9 @@ exec --no-startup-id mailspring
 exec --no-startup-id todoist
 exec --no-startup-id slack
 exec --no-startup-id terminator
-# exec --no-startup-id spotify
+exec --no-startup-id spotify
 exec --no-startup-id code
+exec --no-startup-id nautilus
 
 # Mirror displays
 exec xrandr --auto
