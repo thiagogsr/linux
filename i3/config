@@ -256,15 +256,15 @@ for_window [class="zoom"] floating enable, border none
 exec --no-startup-id "i3-msg 'workspace 1; append_layout ~/.config/i3/workspace-1.json'"
 exec --no-startup-id "i3-msg 'workspace 2; append_layout ~/.config/i3/workspace-2.json'"
 exec --no-startup-id "i3-msg 'workspace 3; append_layout ~/.config/i3/workspace-3.json'"
-exec --no-startup-id "i3-msg 'workspace 4; append_layout ~/.config/i3/workspace-4.json'"
 
-exec --no-startup-id brave-browser
-exec --no-startup-id slack
-exec --no-startup-id code
-exec --no-startup-id mailspring
-exec --no-startup-id spotify
-exec --no-startup-id todoist
 exec --no-startup-id ulauncher
+exec --no-startup-id brave-browser
+exec --no-startup-id mailspring
+exec --no-startup-id todoist
+exec --no-startup-id slack
+exec --no-startup-id terminator
+exec --no-startup-id spotify
+exec --no-startup-id code
 
 # Mirror displays
 exec xrandr --auto
