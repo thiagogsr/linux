@@ -21,23 +21,23 @@ wireless _first_ {
 }
 
 cpu_usage {
-  format = "CPU %usage"
+  format = "💻 %usage"
   max_threshold = 75
 }
 
 memory {
-  format = "Mem %used"
+  format = "🧠 %used"
   threshold_degraded = "10%"
-  format_degraded = "MEMORY: %free"
+  format_degraded = "🧠 %free"
 }
 
 disk "/" {
-  format = "Disk %free"
+  format = "💾 %free"
 }
 
 volume master {
-  format = "♪ %volume"
-  format_muted = "♪ muted"
+  format = "🔊 %volume"
+  format_muted = "🔇"
   device = "default"
   mixer = "Master"
   mixer_idx = 0
@@ -57,5 +57,5 @@ battery 0 {
 }
 
 tztime local {
-  format = "%a, %d %b %H:%M"
+  format = "📅 %d/%m %H:%M"
 }
