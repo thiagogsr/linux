@@ -243,17 +243,17 @@ bindsym XF86AudioPlay exec "playerctl --player=spotify,%any play-pause"
 bindsym XF86AudioNext exec "playerctl --player=spotify,%any next"
 bindsym XF86AudioPrev exec "playerctl --player=spotify,%any previous"
 
-# kill focused window
+# Kill focused window
 bindsym $mod+q kill
 
 # Snooze notifications
 bindsym $mod+Shift+n exec --no-startup-id notify-send "DUNST_COMMAND_TOGGLE"
 
-# uLauncher
+# Floating windows
 for_window [class="Ulauncher"] floating enable, border none
 for_window [class="zoom"] floating enable, border none
 
-# layouts
+# Layouts
 exec --no-startup-id "i3-msg 'workspace 1; append_layout ~/.config/i3/workspace-1.json'"
 exec --no-startup-id "i3-msg 'workspace 2; append_layout ~/.config/i3/workspace-2.json'"
 exec --no-startup-id "i3-msg 'workspace 3; append_layout ~/.config/i3/workspace-3.json'"
@@ -263,10 +263,10 @@ exec --no-startup-id brave-browser
 exec --no-startup-id mailspring
 exec --no-startup-id todoist
 exec --no-startup-id slack
+exec --no-startup-id nautilus
+exec --no-startup-id code
 exec --no-startup-id terminator
 exec --no-startup-id spotify
-exec --no-startup-id code
-exec --no-startup-id nautilus
 
 # Mirror displays
 exec xrandr --auto
@@ -286,3 +286,6 @@ mode "move" {
 }
 
 bindsym $mod+m mode "move" focus floating
+
+# Spotify
+for_window [class="Spotify"] move window to workspace 2
