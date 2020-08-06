@@ -52,6 +52,14 @@ i3status
 ln -s /home/thiago/projects/linux/i3status/config /home/thiago/.config/i3status/config
 ```
 
+## Terminator
+
+1. Create symbolic link for config file
+
+```
+ln -s /home/thiago/projects/linux/terminator/config /home/thiago/.config/terminator/config
+```
+
 ## Dracula
 
 ### Ulauncher
