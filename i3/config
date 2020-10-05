@@ -237,7 +237,7 @@ mode "exit: [l]ogout, [r]eboot, [p]oweroff" {
 bindsym $mod+x mode "exit: [l]ogout, [r]eboot, [p]oweroff"
 
 # Media player controls
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ 0 && [ $(pacmd dump-volumes | awk 'NR==1{print $8}' | sed 's/\%//') -lt 100 ] && pactl set-sink-volume @DEFAULT_SINK@ +5% && $refresh_i3status
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ 0 && pactl set-sink-volume @DEFAULT_SINK@ +5% && $refresh_i3status
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ 0 && pactl set-sink-volume @DEFAULT_SINK@ -5% && $refresh_i3status
 bindsym XF86AudioPlay exec "playerctl --player=spotify,%any play-pause"
 bindsym XF86AudioNext exec "playerctl --player=spotify,%any next"
@@ -251,12 +251,12 @@ bindsym $mod+Shift+n exec --no-startup-id notify-send "DUNST_COMMAND_TOGGLE"
 
 # Floating windows
 for_window [class="Ulauncher"] floating enable, border none
-for_window [class="zoom"] floating enable, border none
 
 # Layouts
 exec --no-startup-id "i3-msg 'workspace 1; append_layout ~/.config/i3/workspace-1.json'"
 exec --no-startup-id "i3-msg 'workspace 2; append_layout ~/.config/i3/workspace-2.json'"
 exec --no-startup-id "i3-msg 'workspace 3; append_layout ~/.config/i3/workspace-3.json'"
+exec --no-startup-id "i3-msg 'workspace 4; append_layout ~/.config/i3/workspace-4.json'"
 
 exec --no-startup-id ulauncher
 exec --no-startup-id brave-browser
@@ -267,6 +267,8 @@ exec --no-startup-id nautilus
 exec --no-startup-id code
 exec --no-startup-id terminator
 exec --no-startup-id spotify
+exec --no-startup-id discord
+exec --no-startup-id zoom-client
 
 # Mirror displays
 exec xrandr --auto
@@ -289,3 +291,4 @@ bindsym $mod+m mode "move" focus floating
 
 # Spotify
 for_window [class="Spotify"] move window to workspace 2
+for_window [class="zoom"] move window to workspace 2

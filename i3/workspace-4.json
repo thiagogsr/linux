@@ -1,0 +1,13 @@
+{
+  "border": "pixel",
+  "current_border_width": 3,
+  "floating": "auto_off",
+  "percent": 1,
+  "swallows": [
+    {
+      "class": "^discord$",
+      "instance": "^discord$"
+    }
+  ],
+  "type": "con"
+}

@@ -44,6 +44,7 @@ ln -s /home/thiago/projects/linux/i3/config /home/thiago/.config/i3/config
 ln -s /home/thiago/projects/linux/i3/workspace-1.json /home/thiago/.config/i3/workspace-1.json
 ln -s /home/thiago/projects/linux/i3/workspace-2.json /home/thiago/.config/i3/workspace-2.json
 ln -s /home/thiago/projects/linux/i3/workspace-3.json /home/thiago/.config/i3/workspace-3.json
+ln -s /home/thiago/projects/linux/i3/workspace-4.json /home/thiago/.config/i3/workspace-4.json
 ```
 
 i3status
